@@ -3,6 +3,10 @@ import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 import './App.css';
 // import axios from 'axios';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Home from './pages/Home';
+import Profile from './pages/Profile';
+import SearchResults from './pages/SearchResults';
+import Signup from './pages/Signup';
 
 
 const client = new ApolloClient({

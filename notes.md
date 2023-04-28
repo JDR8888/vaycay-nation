@@ -1,3 +1,6 @@
+## theme
+- B/W toggleable from nav. everything will be black or white except accent color (something earthy since it's an NPS-based/outdoorsy site). toggling will flip all black and white but leave accent color the same. 
+
 
 ## NPS API
 - parks by name

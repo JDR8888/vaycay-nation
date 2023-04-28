@@ -15,7 +15,7 @@ const client = new ApolloClient({
 });
 
 
-// axios.get('https://developer.nps.gov/api/v1/parks?stateCode=MN&api_key=TRwtUPRfynEen7iIp3GN9eZAgjkJ0MVIQOC7dmly')
+// axios.get('https://developer.nps.gov/api/v1/parks?stateCode=MN&api_key=')
 //   .then(response => {
 //     // handle success
 //     console.log(response.data);

@@ -8,30 +8,33 @@ import { Link } from 'react-router-dom';
 
 function NavbarComp() {
     return (
-        <Navbar bg="light" expand="lg">
-          <Container>
-            <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className="me-auto">
-                <Nav.Link href="#home">Home</Nav.Link>
-                <Nav.Link href="#link">Link</Nav.Link>
-                <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                  <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.2">
-                    Another action
-                  </NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item href="#action/3.4">
-                    Separated link
-                  </NavDropdown.Item>
-                </NavDropdown>
-              </Nav>
-            </Navbar.Collapse>
-          </Container>
-        </Navbar>
-      );
-    }
+      <Navbar expand="lg" style={{ backgroundColor: '#1B5448' }}>
+        <Container>
+          <Link to="/" style={{ textDecoration: 'none' }}>
+            <Navbar.Brand style={{ color: 'white', fontSize: '2.5em', textDecoration: 'none' }}>
+              VayCay Nation
+            </Navbar.Brand>
+          </Link>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="me-auto">
+              <Link to="/" style={{ color: 'white', textDecoration: 'none', fontSize: '1.5em', marginRight: '1rem' }}>
+                Home
+              </Link>
+              <Link to="/SearchResults" style={{ color: 'white', textDecoration: 'none', fontSize: '1.5em', marginRight: '1rem' }}>
+                Search
+              </Link>
+              <NavDropdown title="User Options" id="basic-nav-dropdown" style={{ color: 'white', fontSize: '1.5em' }}>
+                <NavDropdown.Item style={{ backgroundColor: '#1B5448', color: 'white' }}>Action</NavDropdown.Item>
+                <NavDropdown.Item style={{ backgroundColor: '#1B5448', color: 'white' }}>Another action</NavDropdown.Item>
+                <NavDropdown.Item style={{ backgroundColor: '#1B5448', color: 'white' }}>Something</NavDropdown.Item>
+              </NavDropdown>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+    );
+  }
+  
 
 export default NavbarComp;

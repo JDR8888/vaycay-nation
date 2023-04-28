@@ -1,38 +1,40 @@
 import React, { useState } from 'react';
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
-import reactLogo from './assets/react.svg';
-import viteLogo from './assets/vite.svg';
 import './App.css';
+// import axios from 'axios';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
 
 const client = new ApolloClient({
   uri: '/graphql',
   cache: new InMemoryCache(),
 });
 
+
+// axios.get('https://developer.nps.gov/api/v1/parks?stateCode=MN&api_key=TRwtUPRfynEen7iIp3GN9eZAgjkJ0MVIQOC7dmly')
+//   .then(response => {
+//     // handle success
+//     console.log(response.data);
+//   })
+//   .catch(error => {
+//     // handle error
+//     console.log(error);
+//   });
+
+
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <ApolloProvider client={client}>
-      <div className="App">
-        <div>
-          <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
-            <img src={viteLogo} className="logo" alt="Vite logo" />
-          </a>
-          <a href="https://reactjs.org" target="_blank" rel="noreferrer">
-            <img src={reactLogo} className="logo react" alt="React logo" />
-          </a>
-        </div>
-        <h1>Vite + React</h1>
-        <div className="card">
-          <button type="button" onClick={() => setCount(count + 1)}>
-            count is {count}
-          </button>
-        </div>
-        <p className="read-the-docs">
-          Click on the Vite and React logos to learn more
-        </p>
-      </div>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/profile' element={ <Profile /> } />
+          <Route path='/searchResults' element={ <SearchResults /> } />
+
+        </Routes>
+      </BrowserRouter>
     </ApolloProvider>
   );
 }

@@ -11,7 +11,6 @@ const visitedParkSchema = new Schema({
     // Add any other properties you want to save
   });
 
-
 const userSchema = new Schema({
     name: {
         type: String,

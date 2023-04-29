@@ -5,10 +5,9 @@ const bcrypt = require('bcrypt');
 // want to keep track of parks user has been to
 const visitedParkSchema = new Schema({
     parkId: {
-      type: Number,
+      type: String,
       required: true,
     },
-    // Add any other properties you want to save
   });
 
 const userSchema = new Schema({
@@ -46,7 +45,7 @@ const userSchema = new Schema({
             ref: 'User',
         },
     ],
-    visited: [visitedParkSchema] 
+    visits: [visitedParkSchema] 
 });
 
 // pre-save middleware to create encrypted password

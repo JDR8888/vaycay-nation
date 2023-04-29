@@ -48,7 +48,8 @@ const typeDefs = gql`
   type Query {
     users: [User]
     user(email: String!): User
-    parks(park: String): [Park]
+    getParksByState(state: String): [Park]
+    getParksByName(name: String): [Park]
     park(parkId: String!): Park
     visits(user: String): [Visit]
     visit(visitId: ID!): Visit

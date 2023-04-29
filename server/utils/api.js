@@ -1,8 +1,8 @@
 // bring in axios for making api calls
 const axios = require('axios');
 // grab our api key from dotenv
-// const apiKey = process.env.API_KEY;
-const apiKey = 'TRwtUPRfynEen7iIp3GN9eZAgjkJ0MVIQOC7dmly'
+const apiKey = process.env.API_KEY;
+
 
 //  set up function getParkByState (take param for state, and reference apiKey )
 async function getParksByState(state) {

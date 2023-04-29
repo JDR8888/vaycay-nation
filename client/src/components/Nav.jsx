@@ -6,7 +6,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 
 import { Link } from 'react-router-dom';
 
-function NavbarComp() {
+export default function NavbarComp() {
     return (
       <Navbar expand="lg" style={{ backgroundColor: '#1B5448' }}>
         <Container>
@@ -37,4 +37,3 @@ function NavbarComp() {
   }
   
 
-export default NavbarComp;

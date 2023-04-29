@@ -1,38 +1,29 @@
-// const resolvers = {
-//   Query: {
-//     users: async () => {
-//       return [
-//         {
-//           _id: 'asdioufo9a8rtjaod8iosmf',
-//           username: 'Mork',
-//           email: 'mork@nanoo.org',
-//           password: 'youllneverguess',
-//         },
-//       ];
-//     },
-//   },
-// };
-
-// module.exports = resolvers;
 require('dotenv').config();
-// const ObjectId = require('mongoose').Types.ObjectId;
-const { fetchParks, fetchPark } = require('../utils/api.js');
-// const { AuthenticationError } = require('apollo-server-express');
-// const { User } = require('../models');
-// const { signToken } = require('../utils/auth');
+const ObjectId = require('mongoose').Types.ObjectId;
+const { getParksByState, getParksByName } = require('../utils/api.js');
+const { AuthenticationError } = require('apollo-server-express');
+const { User, Visit } = require('../models');
+const { signToken } = require('../utils/auth');
 
 const resolvers = {
   Query: {
-    // Returns all parks
-    parks: async (_, { park }) => {
-      const data = await fetchParks(park);
-      return data.results;
+    users: async () => {
+      return await User.find({}).populate('visits');
     },
 
-    // Returns a park
-    park: async (_, { parkId }) => {
-      const data = await fetchPark(parkId);
+    user: async (_, { email }) => {
+      return await User.findOne({ email }).populate('visits');
+    },
+
+    getParksByState: async (_, { state }) => {
+      const response = await getParksByState(state);
+      const data = response.data.data;
       return data;
+    },
+
+    getParksByName: async (_, { name }) => {
+      const data = await getParksByName(name);
+      return data.results;
     },
   },
 };

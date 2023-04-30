@@ -1,8 +1,8 @@
-// import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-// import NavDropdown from 'react-bootstrap/NavDropdown';
+import Auth from '../utils/auth.js';
 import Dropdown from 'react-bootstrap/Dropdown';
 
 import { Link } from 'react-router-dom';
@@ -25,22 +25,27 @@ export default function NavbarComp() {
               <Link to="/SearchResults" style={{ color: 'white', textDecoration: 'none', fontSize: '1.5em', marginRight: '1rem' }}>
                 Search
               </Link>
-              {/* <NavDropdown title="User Options" id="basic-nav-dropdown" style={{ color: 'white !important', fontSize: '1.5em' }}>
-                <NavDropdown.Item style={{ backgroundColor: '#1B5448', color: 'white' }}>Profile</NavDropdown.Item>
-                <NavDropdown.Item style={{ backgroundColor: '#1B5448', color: 'white' }}>My Stuff</NavDropdown.Item>
-                <NavDropdown.Item style={{ backgroundColor: '#1B5448', color: 'white' }}>Friends</NavDropdown.Item>
-              </NavDropdown> */}
               <Dropdown>
                 <Dropdown.Toggle variant="outline" id="dropdown-basic"
                 style={{color: 'white', fontFamily: 'Oxygen', fontSize: '1.5em'}}
                 >
                   User Options
                 </Dropdown.Toggle>
-                <Dropdown.Menu>
-                  <Dropdown.Item href="#/action-1">Profile</Dropdown.Item>
-                  <Dropdown.Item href="#/action-2">Your Stuff</Dropdown.Item>
-                  <Dropdown.Item href="#/action-3">Friends</Dropdown.Item>
-                  <Dropdown.Item href="#/action-3">Logout</Dropdown.Item>
+                <Dropdown.Menu 
+                style={{backgroundColor: '#1B5448'}}
+                >
+                  <Dropdown.Item href="#/action-1"
+                  style={{color: 'white'}}
+                  >Profile</Dropdown.Item>
+                  <Dropdown.Item href="#/action-2"
+                  style={{color: 'white'}}
+                  >Your Stuff</Dropdown.Item>
+                  <Dropdown.Item href="#/action-3"
+                  style={{color: 'white'}}
+                  >Friends</Dropdown.Item>
+                  <Dropdown.Item onClick={Auth.logout}
+                  style={{color: 'white'}}
+                  >Logout</Dropdown.Item>
                 </Dropdown.Menu>
               </Dropdown>
             </Nav>

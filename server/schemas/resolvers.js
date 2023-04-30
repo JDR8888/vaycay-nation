@@ -6,14 +6,15 @@ const { User, Visit } = require('../models');
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
-
   Query: {
-   
+    // Returns multiple users with their visits
     users: async () => {
       return await User.find({}).populate('visits');
     },
 
-    user: async (_, { email } ) => {
+    // Returns a single user with their visits
+
+    user: async (_, { email }) => {
       return await User.findOne({ email }).populate('visits');
     },
 
@@ -24,11 +25,11 @@ const resolvers = {
     },
 
     getParksByName: async (_, { name }) => {
+      // console.log('searching for park:', name);
       const data = await getParksByName(name);
-      return data.results;
-    }
-
-
+      // console.log('API response:', data);
+      return data.data;
+    },
   }, // end queries
 
   Mutation: {
@@ -41,8 +42,8 @@ const resolvers = {
       return { token, user };
     },
 
-     // Login
-     login: async (_, { email, password }) => {
+    // Login
+    login: async (_, { email, password }) => {
       // Find a user
       const user = await User.findOne({ email });
 
@@ -61,10 +62,7 @@ const resolvers = {
       const token = signToken(user);
       return { token, user };
     },
-  
-    
-  }
-  
+  },
 };
 
 module.exports = resolvers;

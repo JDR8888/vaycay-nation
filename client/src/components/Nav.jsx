@@ -36,11 +36,21 @@ export default function NavbarComp() {
                 >
                   User Options
                 </Dropdown.Toggle>
-                <Dropdown.Menu>
-                  <Dropdown.Item href="#/action-1">Profile</Dropdown.Item>
-                  <Dropdown.Item href="#/action-2">Your Stuff</Dropdown.Item>
-                  <Dropdown.Item href="#/action-3">Friends</Dropdown.Item>
-                  <Dropdown.Item href="#/action-3">Logout</Dropdown.Item>
+                <Dropdown.Menu 
+                style={{backgroundColor: '#1B5448'}}
+                >
+                  <Dropdown.Item href="#/action-1"
+                  style={{color: 'white'}}
+                  >Profile</Dropdown.Item>
+                  <Dropdown.Item href="#/action-2"
+                  style={{color: 'white'}}
+                  >Your Stuff</Dropdown.Item>
+                  <Dropdown.Item href="#/action-3"
+                  style={{color: 'white'}}
+                  >Friends</Dropdown.Item>
+                  <Dropdown.Item href="#/action-3"
+                  style={{color: 'white'}}
+                  >Logout</Dropdown.Item>
                 </Dropdown.Menu>
               </Dropdown>
             </Nav>

@@ -21,7 +21,7 @@ export const GET_PARKS_BY_STATE = gql`
 `;
 
 export const GET_PARKS_BY_NAME = gql`
-  query GetParksByName($name: name) {
+  query GetParksByName($name: String) {
     getParksByName(name: $name) {
       fullName
       description

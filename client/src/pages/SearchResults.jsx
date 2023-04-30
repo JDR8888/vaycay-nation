@@ -51,16 +51,12 @@ export default function SearchResults() {
         }}
       >
         <Form onSubmit={handleSubmit} style={{ width: '50%' }}>
-          <Link to="/SearchByName">
-            <Button variant="secondary" type="submit">
-              Search by park name
-            </Button>
-          </Link>
           <Form.Group controlId="stateSelect">
             <Form.Select
               aria-label="Select state"
               value={selectedState}
               onChange={handleChange}
+              style={{margin: '0.5em'}}
             >
               <option value="">Select a state</option>
               {states.map((state) => (
@@ -70,9 +66,14 @@ export default function SearchResults() {
               ))}
             </Form.Select>
           </Form.Group>
-          <Button variant="primary" type="submit" style={{ width: '100%' }}>
+          <Button type="submit" style={{ width: '100%', margin: '0.5em', backgroundColor: '#1B5448' }}>
             Search
           </Button>
+          <Link to="/SearchByName">
+            <Button variant="secondary" style={{ width: '100%', margin: '0.5em' }}>
+              Search by park name instead
+            </Button>
+          </Link>
         </Form>
       </div>
       <div
@@ -82,7 +83,7 @@ export default function SearchResults() {
           parkData.map((park) => (
             <div
               key={park.id}
-              style={{ flex: '0 0 calc(20% - 1rem)', margin: '0.5rem' }}
+              style={{ flex: '0 0 calc(25% - 1rem)', margin: '0.5rem' }}
             >
               <ParkCard
                 parkName={park.fullName}

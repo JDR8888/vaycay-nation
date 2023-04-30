@@ -29,7 +29,7 @@ export default function ParkCard(props) {
         <Modal.Body>
           <div style={{ display: 'flex' }}>
             <div style={{ flex: '0 0 50%', paddingRight: '1rem' }}>
-              <img src={`https://api.mapbox.com/styles/v1/mapbox/streets-v12/static/url-https%3A%2F%2Fdocs.mapbox.com%2Fapi%2Fimg%2Fcustom-marker.png(${longitude},${latitude})/${longitude},${latitude},5/500x500?access_token=pk.eyJ1IjoiamRyODg4OCIsImEiOiJjbGVmdTg1bXowYmxmM3ludjJscjNlcWk5In0.T8Nn1lRMy558npSqRLS71w`} alt="Park Location" style={{ maxWidth: '100%', height: 'auto' }} />
+              <img src={`https://api.mapbox.com/styles/v1/mapbox/outdoors-v12/static/url-https%3A%2F%2Fdocs.mapbox.com%2Fapi%2Fimg%2Fcustom-marker.png(${longitude},${latitude})/${longitude},${latitude},9/500x500?access_token=pk.eyJ1IjoiamRyODg4OCIsImEiOiJjbGVmdTg1bXowYmxmM3ludjJscjNlcWk5In0.T8Nn1lRMy558npSqRLS71w`} alt="Park Location" style={{ maxWidth: '100%', height: 'auto' }} />
             </div>
             <div style={{ flex: '0 0 50%', paddingLeft: '1rem' }}>
               <h3>About {parkName}:</h3>

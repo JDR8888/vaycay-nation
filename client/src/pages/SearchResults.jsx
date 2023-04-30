@@ -59,14 +59,14 @@ export default function SearchResults() {
             ))}
           </Form.Select>
         </Form.Group>
-        <Button variant="primary" type="submit" style={{ width: '100%' }}>
+        <Button  type="submit" style={{ width: '100%', backgroundColor: '#1B5448' }}>
           Search
         </Button>
       </Form>
     </div>
     <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
   {data && parkData.map((park) => (
-    <div key={park.id} style={{ flex: '0 0 calc(20% - 1rem)', margin: '0.5rem' }}>
+    <div key={park.id} style={{ flex: '0 0 calc(25% - 1rem)', margin: '0.5rem' }}>
       <ParkCard 
         parkName={park.fullName}
         description={park.description}

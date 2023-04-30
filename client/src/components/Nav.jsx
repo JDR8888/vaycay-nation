@@ -1,4 +1,4 @@
-// import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -25,11 +25,6 @@ export default function NavbarComp() {
               <Link to="/SearchResults" style={{ color: 'white', textDecoration: 'none', fontSize: '1.5em', marginRight: '1rem' }}>
                 Search
               </Link>
-              {/* <NavDropdown title="User Options" id="basic-nav-dropdown" style={{ color: 'white !important', fontSize: '1.5em' }}>
-                <NavDropdown.Item style={{ backgroundColor: '#1B5448', color: 'white' }}>Profile</NavDropdown.Item>
-                <NavDropdown.Item style={{ backgroundColor: '#1B5448', color: 'white' }}>My Stuff</NavDropdown.Item>
-                <NavDropdown.Item style={{ backgroundColor: '#1B5448', color: 'white' }}>Friends</NavDropdown.Item>
-              </NavDropdown> */}
               <Dropdown>
                 <Dropdown.Toggle variant="outline" id="dropdown-basic"
                 style={{color: 'white', fontFamily: 'Oxygen', fontSize: '1.5em'}}

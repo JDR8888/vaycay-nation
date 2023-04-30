@@ -1,8 +1,8 @@
-import React from "react";
+// import React from "react";
 
-export default function Signup () {
+// export default function Signup () {
 
-    return (
-        <h1> sign u p here </h1>
-    )
-}
+//     return (
+//         <h1> sign u p here </h1>
+//     )
+// }

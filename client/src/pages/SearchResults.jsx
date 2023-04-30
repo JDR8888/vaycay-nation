@@ -22,8 +22,6 @@ export default function SearchResults() {
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(selectedState);
-    // const selectedStateObject = states.find(state => state.code === selectedState);
-    // console.log(selectedStateObject.name);
     getParkData();
   };
 
@@ -53,7 +51,7 @@ export default function SearchResults() {
         }}
       >
         <Form onSubmit={handleSubmit} style={{ width: '50%' }}>
-          <Link to="/search-by-park-name">
+          <Link to="/SearchByName">
             <Button variant="secondary" type="submit">
               Search by park name
             </Button>

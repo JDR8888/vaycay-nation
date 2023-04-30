@@ -1,44 +1,37 @@
 import { useState, useEffect } from 'react';
-import { states } from '../utils/states';
-import { Link } from 'react-router-dom';
-// import { useHistory } from 'react-router-dom';
 import { Button, Form } from 'react-bootstrap';
 import { useLazyQuery } from '@apollo/client';
-import { GET_PARKS_BY_STATE } from '../utils/queries';
-// import { GET_PARKS_BY_NAME } from '../utils/queries';
+import { GET_PARKS_BY_NAME } from '../utils/queries';
 import ParkCard from '../components/ParkCard';
 
-export default function SearchResults() {
-  // const history = useHistory();
-  const [selectedState, setSelectedState] = useState('');
+export default function SearchByParkName() {
+  const [searchText, setSearchText] = useState('');
   const [parkData, setParkData] = useState([]);
 
   const handleChange = (event) => {
-    setSelectedState(event.target.value);
+    setSearchText(event.target.value);
   };
 
   console.log(parkData);
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(selectedState);
-    // const selectedStateObject = states.find(state => state.code === selectedState);
-    // console.log(selectedStateObject.name);
+    console.log(searchText);
     getParkData();
   };
 
   const [getParkData, { loading, error, data }] = useLazyQuery(
-    GET_PARKS_BY_STATE,
+    GET_PARKS_BY_NAME,
     {
       variables: {
-        state: selectedState,
+        name: searchText,
       },
     }
   );
 
   useEffect(() => {
     if (data) {
-      setParkData(data.getParksByState);
+      setParkData(data.getParksByName);
     }
   }, [data]);
 
@@ -53,24 +46,13 @@ export default function SearchResults() {
         }}
       >
         <Form onSubmit={handleSubmit} style={{ width: '50%' }}>
-          <Link to="/search-by-park-name">
-            <Button variant="secondary" type="submit">
-              Search by park name
-            </Button>
-          </Link>
-          <Form.Group controlId="stateSelect">
-            <Form.Select
-              aria-label="Select state"
-              value={selectedState}
+          <Form.Group controlId="searchText">
+            <Form.Control
+              type="text"
+              placeholder="Enter park name"
+              value={searchText}
               onChange={handleChange}
-            >
-              <option value="">Select a state</option>
-              {states.map((state) => (
-                <option key={state.code} value={state.code} name={state.name}>
-                  {state.name}
-                </option>
-              ))}
-            </Form.Select>
+            />
           </Form.Group>
           <Button variant="primary" type="submit" style={{ width: '100%' }}>
             Search

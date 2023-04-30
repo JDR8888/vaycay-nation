@@ -25,8 +25,10 @@ const resolvers = {
     },
 
     getParksByName: async (_, { name }) => {
+      // console.log('searching for park:', name);
       const data = await getParksByName(name);
-      return data.results;
+      // console.log('API response:', data);
+      return data.data;
     },
   }, // end queries
 

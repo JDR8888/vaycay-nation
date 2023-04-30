@@ -2,7 +2,7 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-// import NavDropdown from 'react-bootstrap/NavDropdown';
+import Auth from '../utils/auth.js';
 import Dropdown from 'react-bootstrap/Dropdown';
 
 import { Link } from 'react-router-dom';
@@ -48,7 +48,7 @@ export default function NavbarComp() {
                   <Dropdown.Item href="#/action-3"
                   style={{color: 'white'}}
                   >Friends</Dropdown.Item>
-                  <Dropdown.Item href="#/action-3"
+                  <Dropdown.Item onClick={Auth.logout}
                   style={{color: 'white'}}
                   >Logout</Dropdown.Item>
                 </Dropdown.Menu>

@@ -22,8 +22,8 @@ potential colors: alpine green #1B5448
     - description (string longer)
     - fullName (string)
     - id ( alphanumeric (string) )
-    - lat (int)
-    - lon (int)
+    - lat (String)
+    - lon (String)
     - weatherInfo (string/longer text)
     - [ images ] .url, .altText
     - operating hours[0] .description 

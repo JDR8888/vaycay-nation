@@ -40,10 +40,31 @@ const resolvers = {
       // Returns the user info and their token
       return { token, user };
     },
+
+     // Login
+     login: async (_, { email, password }) => {
+      // Find a user
+      const user = await User.findOne({ email });
+
+      // If no user is found, return message
+      if (!user) {
+        throw new AuthenticationError('The infomation is incorrect');
+      }
+
+      // Check to see if the password is correct from validator in User.js
+      const correctPw = await user.isCorrectPassword(password);
+
+      // If incorrect password, return message
+      if (!correctPw) {
+        throw new AuthenticationError('The infomation is incorrect');
+      }
+      const token = signToken(user);
+      return { token, user };
+    },
   
+    
   }
   
-
 };
 
 module.exports = resolvers;

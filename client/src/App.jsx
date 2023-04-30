@@ -17,15 +17,13 @@ const client = new ApolloClient({
 });
 
 
-axios.get('https://developer.nps.gov/api/v1/parks?stateCode=AK&api_key=TRwtUPRfynEen7iIp3GN9eZAgjkJ0MVIQOC7dmly')
-  .then(response => {
-    // handle success
-    console.log(response.data);
-  })
-  .catch(error => {
-    // handle error
-    console.log(error);
-  });
+// axios.get('https://developer.nps.gov/api/v1/parks?stateCode=AK&api_key=TRwtUPRfynEen7iIp3GN9eZAgjkJ0MVIQOC7dmly')
+//   .then(response => {
+//     console.log(response.data);
+//   })
+//   .catch(error => {
+//     console.log(error);
+//   });
 
 
 function App() {

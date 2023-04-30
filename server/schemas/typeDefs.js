@@ -12,7 +12,6 @@ const typeDefs = gql`
     wishlist: [Park]
   }
 
-
   type Park {
     fullName: String
     images: [ImageObj]

@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import Profile from './pages/Profile';
 import SearchResults from './pages/SearchResults';
+import SearchByParkName from './pages/SearchByParkName';
 // import Signup from './pages/Signup';
 import Navbar from './components/Nav';
 
@@ -23,6 +24,7 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/Profile' element={ <Profile /> } />
           <Route path='/SearchResults' element={ <SearchResults /> } />
+          <Route path='/SearchByName' element={ <SearchByParkName /> } />
           {/* <Route path='/Signup' element={<Signup />} /> */}
         </Routes>
       </BrowserRouter>

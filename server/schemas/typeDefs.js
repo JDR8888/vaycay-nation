@@ -12,7 +12,6 @@ const typeDefs = gql`
     wishlist: [Park]
   }
 
-
   type Park {
     fullName: String
     images: [ImageObj]
@@ -55,29 +54,27 @@ const typeDefs = gql`
     visit(visitId: ID!): Visit
   }
 
-    type Mutation {
-      addUser(userName: ID!, email: String!, password: String!, name: String!): Auth
-      addVisit(
-        park: String!
-        user: ID!
-        review: String
-      ): Visit
-      login(email: String!, password: String!): Auth
-      updateUser(
-        userId: ID!
-        username: String
-        email: String
-        password: String
-        ): User
-      updateVisit(
-        visitId: ID!
-        review: String
-      ): Visit
-      addToWishlist(userId: ID!, parkId: String!): User
-      removeFromWishlist(userId: ID!, parkId: Int!): User
-      removeUser(userId: ID!): User
-      removeVisit(visitId: ID!): Visit
-    }
-  `;
+  type Mutation {
+    addUser(
+      username: ID!
+      email: String!
+      password: String!
+      name: String!
+    ): Auth
+    addVisit(park: String!, user: ID!, review: String): Visit
+    login(email: String!, password: String!): Auth
+    updateUser(
+      userId: ID!
+      username: String
+      email: String
+      password: String
+    ): User
+    updateVisit(visitId: ID!, review: String): Visit
+    addToWishlist(userId: ID!, parkId: String!): User
+    removeFromWishlist(userId: ID!, parkId: Int!): User
+    removeUser(userId: ID!): User
+    removeVisit(visitId: ID!): Visit
+  }
+`;
 
 module.exports = typeDefs;

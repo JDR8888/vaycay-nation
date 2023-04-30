@@ -10,15 +10,18 @@ export default function SearchByParkName() {
 
   const handleChange = (event) => {
     setSearchText(event.target.value);
+    console.log(searchText)
   };
 
-  console.log(parkData);
+  // console.log(parkData);
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(searchText);
+    // console.log(searchText);
     getParkData();
   };
+
+  console.log(parkData);
 
   const [getParkData, { loading, error, data }] = useLazyQuery(
     GET_PARKS_BY_NAME,
@@ -54,7 +57,7 @@ export default function SearchByParkName() {
               onChange={handleChange}
             />
           </Form.Group>
-          <Button variant="primary" type="submit" style={{ width: '100%' }}>
+          <Button type="submit" style={{ width: '100%', backgroundColor: '#1B5448' }}>
             Search
           </Button>
         </Form>

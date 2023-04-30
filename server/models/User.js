@@ -36,7 +36,6 @@ const userSchema = new Schema({
         require: true,
         unique: true,
         maxLength: 20,
-        match: [/.+@.+\..+/, 'Must match an email address'],
     },
     // list of friends - model should be self-referencing
     friends: [

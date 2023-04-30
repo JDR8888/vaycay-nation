@@ -16,10 +16,11 @@ const typeDefs = gql`
     fullName: String
     images: [ImageObj]
     id: String
-    lat: Int
-    lon: Int
+    latitude: String
+    longitude: String
     weatherInfo: String
     operatingHours: [operatingHoursObj]
+    description: String
   }
 
   type ImageObj {

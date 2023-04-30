@@ -29,8 +29,20 @@ const resolvers = {
     }
 
 
-  },
+  }, // end queries
 
+  Mutation: {
+    // Creates a user
+    addUser: async (_, args) => {
+      const user = await User.create(args);
+      // Creates a token for the user based of their info
+      const token = signToken(user);
+      // Returns the user info and their token
+      return { token, user };
+    },
+  
+  }
+  
 
 };
 

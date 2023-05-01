@@ -60,6 +60,7 @@ export default function HomePage() {
           </Modal.Body>
         </Modal>
       </div>
+
       <Carousel slide={false}>
         <Carousel.Item>
           <img

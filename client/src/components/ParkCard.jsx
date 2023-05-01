@@ -18,7 +18,7 @@ export default function ParkCard(props) {
         <Card.Body>
           <Card.Title>{parkName}</Card.Title>
           <Card.Text>{description}</Card.Text>
-          <Button variant="primary" onClick={handleShowModal}>See More!</Button>
+          <Button style={{backgroundColor: '#1B5448'}} onClick={handleShowModal}>See More!</Button>
         </Card.Body>
       </Card>
 
@@ -48,8 +48,8 @@ export default function ParkCard(props) {
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleCloseModal}>Close</Button>
-          <Button variant="primary">Leave a Review</Button>
-          <Button variant="primary">Add to Wishlist</Button>
+          <Button style={{backgroundColor: '#1B5448'}}>Leave a Review</Button>
+          <Button style={{backgroundColor: '#1B5448'}} >Add to Wishlist</Button>
         </Modal.Footer>
       </Modal>
     </>

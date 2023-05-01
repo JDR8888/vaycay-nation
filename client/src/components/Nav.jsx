@@ -31,25 +31,50 @@ export default function NavbarComp() {
               </Link>
               <Dropdown>
                 <Dropdown.Toggle variant="outline" id="dropdown-basic"
-                style={{color: 'white', fontFamily: 'Oxygen', fontSize: '1.5em'}}
+                style={{color: 'white', fontFamily: 'Oxygen', fontSize: '1em'}}
                 >
                   User Options
                 </Dropdown.Toggle>
                 <Dropdown.Menu 
                 style={{backgroundColor: '#1B5448'}}
                 >
-                  <Dropdown.Item href="#/action-1"
-                  style={{color: 'white'}}
-                  >Profile</Dropdown.Item>
-                  <Dropdown.Item href="#/action-2"
-                  style={{color: 'white'}}
-                  >Your Stuff</Dropdown.Item>
-                  <Dropdown.Item href="#/action-3"
-                  style={{color: 'white'}}
-                  >Friends</Dropdown.Item>
+                  {/* <Dropdown.Item
+                  style={{color: 'white'}} >  */}
+                    <div>
+                      <Link to='/Profile'
+                    style={{textDecoration: 'none', color: 'white', margin: '0.5em'}}>
+                        My Profile
+                      </Link>
+                    </div>
+                  {/* </Dropdown.Item> */}
+
+                  {/* <Dropdown.Item */}
+                  {/* style={{color: 'white'}}> */}
+                    <div>
+                      <Link to='/MyStuff'
+                      style={{textDecoration: 'none', color: 'white', margin: '0.5em'}}
+                      >
+                       My Stuff
+                      </Link>
+                    </div>
+                  {/* </Dropdown.Item> */}
+
+                  {/* <Dropdown.Item */}
+                  {/* style={{color: 'white'}}> */}
+                    <div>
+                      <Link to='/Friends'
+                      style={{textDecoration: 'none', color:'white', margin: '0.5em'}} 
+                      >
+                        Friends
+                      </Link>
+                    </div>
+                  {/* </Dropdown.Item> */}
+
                   <Dropdown.Item onClick={Auth.logout}
-                  style={{color: 'white'}}
-                  >Logout</Dropdown.Item>
+                  style={{color: '#F5D2D2'}}>
+                    Logout
+                  </Dropdown.Item>
+
                 </Dropdown.Menu>
               </Dropdown>
             </Nav>

@@ -140,14 +140,14 @@ export default function HomePage() {
       </div>
       <div
         id="carouselExample"
-        class="carousel slide"
+        className="carousel slide"
         style={{ margin: '2em' }}
       >
-        <div class="carousel-inner">
-          <div class="carousel-item active">
+        <div className="carousel-inner">
+          <div className="carousel-item active">
             <img
               src="https://www.nps.gov/common/uploads/structured_data/3C83A128-1DD8-B71B-0B02DED286AFD8C6.jpg"
-              class="d-block w-100"
+              className="d-block w-100"
               alt="..."
               style={{
                 width: '200px',
@@ -156,12 +156,12 @@ export default function HomePage() {
                 borderRadius: '100px',
               }}
             />
-            <div class="caption">
+            <div className="caption">
               <h5>What a veiw!</h5>
               <p>Appalachian National Scenic Trail</p>
             </div>
           </div>
-          <div class="carousel-item">
+          <div className="carousel-item">
             <img
               src="https://www.nps.gov/common/uploads/structured_data/3C80E7D5-1DD8-B71B-0B44F2F58F98099D.jpg"
               class="d-block w-100"
@@ -173,12 +173,12 @@ export default function HomePage() {
                 borderRadius: '100px',
               }}
             />
-            <div class="caption">
+            <div className="caption">
               <h5>What a veiw!</h5>
               <p>Appalachian National Scenic Trail</p>
             </div>
           </div>
-          <div class="carousel-item">
+          <div className="carousel-item">
             <img
               src="https://www.nps.gov/common/uploads/structured_data/87E985D9-BF92-9DC3-74B91467FBA15010.jpg"
               class="d-block w-100"
@@ -190,29 +190,29 @@ export default function HomePage() {
                 borderRadius: '100px',
               }}
             />
-            <div class="caption">
+            <div className="caption">
               <h5>What a veiw!</h5>
               <p>Appalachian National Scenic Trail</p>
             </div>
           </div>
         </div>
         <button
-          class="carousel-control-prev"
+          className="carousel-control-prev"
           type="button"
           data-bs-target="#carouselExample"
           data-bs-slide="prev"
         >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
+          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span className="visually-hidden">Previous</span>
         </button>
         <button
-          class="carousel-control-next"
+          className="carousel-control-next"
           type="button"
           data-bs-target="#carouselExample"
           data-bs-slide="next"
         >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
+          <span className="carousel-control-next-icon" aria-hidden="true"></span>
+          <span className="visually-hidden">Next</span>
         </button>
       </div>
     </>

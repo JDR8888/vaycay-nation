@@ -7,6 +7,8 @@ import Profile from './pages/Profile';
 import SearchResults from './pages/SearchResults';
 import SearchByParkName from './pages/SearchByParkName';
 import Signup from './pages/Signup';
+import MyStuff from './pages/MyStuff';
+import Friends from './pages/Friends';
 import Navbar from './components/Nav';
 import Footer from './components/Footer';
 const client = new ApolloClient({
@@ -25,6 +27,8 @@ function App() {
           <Route path="/SearchResults" element={<SearchResults />} />
           <Route path="/SearchByName" element={<SearchByParkName />} />
           <Route path="/Signup" element={<Signup />} />
+          <Route path='/Friends' element={ <Friends /> } />
+          <Route path='/MyStuff' element={ <MyStuff /> }  />
         </Routes>
         <Footer />
       </BrowserRouter>

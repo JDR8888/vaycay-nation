@@ -3,9 +3,8 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Signin from '../components/Signin';
 import trees from '../assets/images/forest.png';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import '../assets/css/carousel.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+import Carousel from 'react-bootstrap/Carousel';
 
 export default function HomePage() {
   const [show, setShow] = useState(false);
@@ -15,83 +14,6 @@ export default function HomePage() {
 
   return (
     <>
-      {/* <div
-        id="carouselExample"
-        class="carousel slide"
-        style={{ marginTop: '2em' }}
-      >
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img
-              src="https://www.nps.gov/common/uploads/structured_data/3C83A128-1DD8-B71B-0B02DED286AFD8C6.jpg"
-              class="d-block w-100"
-              alt="..."
-              style={{
-                width: '200px',
-                height: '500px',
-                objectFit: 'cover',
-                // borderRadius: '100px',
-              }}
-            />
-            <div class="caption">
-              <h5>What a veiw!</h5>
-              <p>Appalachian National Scenic Trail</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img
-              src="https://www.nps.gov/common/uploads/structured_data/3C80E7D5-1DD8-B71B-0B44F2F58F98099D.jpg"
-              class="d-block w-100"
-              alt="..."
-              style={{
-                width: '200px',
-                height: '500px',
-                objectFit: 'cover',
-                borderRadius: '100px',
-              }}
-            />
-            <div class="caption">
-              <h5>What a veiw!</h5>
-              <p>Appalachian National Scenic Trail</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img
-              src="https://www.nps.gov/common/uploads/structured_data/87E985D9-BF92-9DC3-74B91467FBA15010.jpg"
-              class="d-block w-100"
-              alt="..."
-              style={{
-                width: '200px',
-                height: '500px',
-                objectFit: 'cover',
-                borderRadius: '100px',
-              }}
-            />
-            <div class="caption">
-              <h5>What a veiw!</h5>
-              <p>Appalachian National Scenic Trail</p>
-            </div>
-          </div>
-        </div>
-        <button
-          class="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselExample"
-          data-bs-slide="prev"
-        >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button
-          class="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselExample"
-          data-bs-slide="next"
-        >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div> */}
       <div
         className="container-fluid d-flex flex-column justify-content-center align-items-center vh-100"
         style={{ fontFamily: 'Oxygen', padding: '1em' }}
@@ -138,83 +60,49 @@ export default function HomePage() {
           </Modal.Body>
         </Modal>
       </div>
-      <div
-        id="carouselExample"
-        className="carousel slide"
-        style={{ margin: '2em' }}
-      >
-        <div className="carousel-inner">
-          <div className="carousel-item active">
-            <img
-              src="https://www.nps.gov/common/uploads/structured_data/3C83A128-1DD8-B71B-0B02DED286AFD8C6.jpg"
-              className="d-block w-100"
-              alt="..."
-              style={{
-                width: '200px',
-                height: '500px',
-                objectFit: 'cover',
-                borderRadius: '100px',
-              }}
-            />
-            <div className="caption">
-              <h5>What a veiw!</h5>
-              <p>Appalachian National Scenic Trail</p>
-            </div>
-          </div>
-          <div className="carousel-item">
-            <img
-              src="https://www.nps.gov/common/uploads/structured_data/3C80E7D5-1DD8-B71B-0B44F2F58F98099D.jpg"
-              class="d-block w-100"
-              alt="..."
-              style={{
-                width: '200px',
-                height: '500px',
-                objectFit: 'cover',
-                borderRadius: '100px',
-              }}
-            />
-            <div className="caption">
-              <h5>What a veiw!</h5>
-              <p>Appalachian National Scenic Trail</p>
-            </div>
-          </div>
-          <div className="carousel-item">
-            <img
-              src="https://www.nps.gov/common/uploads/structured_data/87E985D9-BF92-9DC3-74B91467FBA15010.jpg"
-              class="d-block w-100"
-              alt="..."
-              style={{
-                width: '200px',
-                height: '500px',
-                objectFit: 'cover',
-                borderRadius: '100px',
-              }}
-            />
-            <div className="caption">
-              <h5>What a veiw!</h5>
-              <p>Appalachian National Scenic Trail</p>
-            </div>
-          </div>
-        </div>
-        <button
-          className="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselExample"
-          data-bs-slide="prev"
-        >
-          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span className="visually-hidden">Previous</span>
-        </button>
-        <button
-          className="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselExample"
-          data-bs-slide="next"
-        >
-          <span className="carousel-control-next-icon" aria-hidden="true"></span>
-          <span className="visually-hidden">Next</span>
-        </button>
-      </div>
+
+      <Carousel slide={false}>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src="https://www.nps.gov/common/uploads/structured_data/3C8397D6-1DD8-B71B-0BEF4C54462A1EB3.jpg"
+            alt="First slide"
+            style={{ height: '600px' }}
+          />
+          <Carousel.Caption>
+            <h3>First slide label</h3>
+            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src="https://www.nps.gov/common/uploads/structured_data/3C83A128-1DD8-B71B-0B02DED286AFD8C6.jpg"
+            alt="Second slide"
+            style={{ height: '600px' }}
+          />
+
+          <Carousel.Caption>
+            <h3>Second slide label</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src="https://www.nps.gov/common/uploads/structured_data/3C83A2B0-1DD8-B71B-0B4589220F4D60D9.jpg"
+            alt="Third slide"
+            style={{ height: '600px' }}
+          />
+
+          <Carousel.Caption>
+            <h3>Third slide label</h3>
+            <p>
+              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+            </p>
+          </Carousel.Caption>
+        </Carousel.Item>
+      </Carousel>
     </>
   );
 }

@@ -100,7 +100,7 @@ export default function Signup() {
       </Form.Group>
 
       <div style={{ display: 'flex' }}>
-    <Button variant="primary" type="submit" disabled={loading} style={{ margin: '0.5em', width: '50%' }}>
+    <Button type="submit" disabled={loading} style={{ margin: '0.5em', width: '50%', backgroundColor: '#1B5448' }}>
       {loading ? 'Submitting...' : 'Submit'}
     </Button>
 

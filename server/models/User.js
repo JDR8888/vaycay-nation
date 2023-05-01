@@ -37,6 +37,11 @@ const userSchema = new Schema({
         unique: true,
         maxLength: 20,
     },
+    avatar: {
+      type: String,
+      require: true,
+      maxLength: 45,
+  },
     // list of friends - model should be self-referencing
     friends: [
         {

@@ -7,6 +7,7 @@ const typeDefs = gql`
     username: String
     email: String
     password: String
+    avatar: String
 
     visited: [Visit]
     wishlist: [Park]
@@ -61,6 +62,7 @@ const typeDefs = gql`
       email: String!
       password: String!
       name: String!
+      avatar: String!
     ): Auth
     addVisit(park: String!, user: ID!, review: String): Visit
     login(email: String!, password: String!): Auth

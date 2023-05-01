@@ -38,18 +38,32 @@ export default function NavbarComp() {
                 <Dropdown.Menu 
                 style={{backgroundColor: '#1B5448'}}
                 >
-                  <Dropdown.Item href="#/action-1"
-                  style={{color: 'white'}}
-                  >Profile</Dropdown.Item>
-                  <Dropdown.Item href="#/action-2"
-                  style={{color: 'white'}}
-                  >Your Stuff</Dropdown.Item>
-                  <Dropdown.Item href="#/action-3"
-                  style={{color: 'white'}}
-                  >Friends</Dropdown.Item>
+                  <Dropdown.Item
+                  style={{color: 'white'}} > 
+                  <Link to='/Profile'
+                  style={{textDecoration: 'none', color: 'white'}}
+                  >My Profile</Link>
+                  </Dropdown.Item>
+
+                  <Dropdown.Item
+                  style={{color: 'white'}}>
+                    <Link to='/MyStuff'>
+                    My Stuff
+                    </Link>
+                  </Dropdown.Item>
+
+                  <Dropdown.Item
+                  style={{color: 'white'}}>
+                    <Link to='/Friends'>
+                      Friends
+                    </Link>
+                  </Dropdown.Item>
+
                   <Dropdown.Item onClick={Auth.logout}
-                  style={{color: 'white'}}
-                  >Logout</Dropdown.Item>
+                  style={{color: 'white'}}>
+                    Logout
+                  </Dropdown.Item>
+
                 </Dropdown.Menu>
               </Dropdown>
             </Nav>

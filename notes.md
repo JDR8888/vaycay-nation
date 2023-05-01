@@ -35,8 +35,15 @@ Fonts:
 
 ## pages
 - Home
-- Profile (if logged in)
-- search page
+
+- - Profile (if logged in)
+- - Friends (if logged in)
+- - My Stuff (if logged in)
+
+- main search page
+- searchByName page
+- - modal of results
+- - maps: https://docs.mapbox.com/api/maps/styles/ 
 
 
 ## models

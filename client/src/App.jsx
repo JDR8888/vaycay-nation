@@ -6,7 +6,7 @@ import Home from './pages/Home';
 import Profile from './pages/Profile';
 import SearchResults from './pages/SearchResults';
 import SearchByParkName from './pages/SearchByParkName';
-// import Signup from './pages/Signup';
+import Signup from './pages/Signup';
 import Navbar from './components/Nav';
 
 const client = new ApolloClient({
@@ -25,7 +25,7 @@ function App() {
           <Route path='/Profile' element={ <Profile /> } />
           <Route path='/SearchResults' element={ <SearchResults /> } />
           <Route path='/SearchByName' element={ <SearchByParkName /> } />
-          {/* <Route path='/Signup' element={<Signup />} /> */}
+          <Route path='/Signup' element={<Signup />} />
         </Routes>
       </BrowserRouter>
     </ApolloProvider>

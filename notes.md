@@ -47,6 +47,7 @@ Fonts:
     - username
     - email
     - password
+    avatar
     - wishlist: [park: {
         - id
         - name

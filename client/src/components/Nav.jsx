@@ -4,6 +4,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Auth from '../utils/auth.js';
 import Dropdown from 'react-bootstrap/Dropdown';
+import logo from '../assets/images/vaycaylogo.png'
 
 import { Link } from 'react-router-dom';
 
@@ -13,7 +14,10 @@ export default function NavbarComp() {
         <Container>
           <Link to="/" style={{ textDecoration: 'none' }}>
             <Navbar.Brand style={{ color: 'white', fontSize: '2.5em', textDecoration: 'none', fontFamily: 'Domine' }}>
+            <img src={logo} alt="logo" style={{ width: '50px', height: '50px', marginRight: '10px' }} />
+            <span style={{ color: 'white', fontSize: '1em', fontFamily: 'Domine', textAlign: 'center' }}>
               VayCay Nation
+            </span>
             </Navbar.Brand>
           </Link>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />

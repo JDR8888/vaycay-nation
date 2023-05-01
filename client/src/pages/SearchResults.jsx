@@ -17,11 +17,8 @@ export default function SearchResults() {
     setSelectedState(event.target.value);
   };
 
-  console.log(parkData);
-
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(selectedState);
     getParkData();
   };
 

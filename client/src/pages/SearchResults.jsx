@@ -38,7 +38,9 @@ export default function SearchResults() {
   }, [data]);
 
   return (
-    <>
+    <div
+    style={{minHeight: '78vh'}}
+    >
       <div
         style={{
           display: 'flex',
@@ -95,6 +97,6 @@ export default function SearchResults() {
             </div>
           ))}
       </div>
-    </>
+    </div>
   );
 }

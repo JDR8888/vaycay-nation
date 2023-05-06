@@ -37,7 +37,7 @@ app.use(
 
 // point to dist folder
 app.use(express.static(path.join(__dirname, '../client/dist')));
-app.use(favicon(__dirname + './favicon.png'));
+app.use(favicon(__dirname + '../client/favicon.png'));
 
 app.get('/', (req, res) =>
   res.sendFile(path.join(__dirname, '../client/dist/index.html'))

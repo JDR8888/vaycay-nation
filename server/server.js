@@ -18,6 +18,12 @@ const PORT = process.env.PORT || 3001;
 const server = new ApolloServer({
   typeDefs,
   resolvers,
+  cacheControl: {
+    defaultMaxAge: 60,
+  },
+  persistedQueries: {
+    cache: 'bounded', // Set cache to "bounded"
+  },
 });
 
 // middlewares

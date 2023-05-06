@@ -2,6 +2,7 @@
 dotenv = require('dotenv');
 const express = require('express');
 const path = require('path');
+const favicon = require('express-favicon');
 // apollo server
 const { ApolloServer } = require('apollo-server-express');
 // database connection
@@ -36,6 +37,7 @@ app.use(
 
 // point to dist folder
 app.use(express.static(path.join(__dirname, '../client/dist')));
+app.use(favicon(__dirname + './favicon.png'));
 
 app.get('/', (req, res) =>
   res.sendFile(path.join(__dirname, '../client/dist/index.html'))
